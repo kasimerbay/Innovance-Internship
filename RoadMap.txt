@@ -1,0 +1,31 @@
+------Öngereksinimler-----------
+Git komutları ??? (Github - Gitlab ) ? Bitbucket
+Linux Network Katmanları
+Docker - Konteyner standartı
+CI/CD nedir / araçları nelerdir
+Scripting - ?
+
+----------------------------
+Devops toolları
+----------------------------
+Monitoring - Logging
+Kubernetes
+Azure Devops
+Jenkins
+Nexus (Harbor)
+Sonarqube
+Kubernetes/Openshift/Rancher/Anthos
+Gitlab
+ELK-EFK (ELasticsearc Logstash-kibana / Eleasticsearch-fluend-Kibana) 
+Grafana-Prometheus
+Terraform (Cloud)
+Ansible (UI-Tower (free AWX)
+APM (Dynatrace-Riverbed-AppDynamics-New Relic)
+
+-----------------------------
+
+Linux Network Katmanları
+
+Docker
+
+Kubernetes

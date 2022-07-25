@@ -132,6 +132,10 @@ Linux Network Layers (https://tldp.org/LDP/intro-linux/html/sect_10_01.html
 			https://www.linux.com/topic/networking/practical-networking-linux-admins-tcpip/
 			* https://www.geeksforgeeks.org/tcp-ip-model/?ref=lbp)
 
+	-- SOME PROJECTS ABOUT NETWORKING
+		* Chat Application Using Raspberry Pi
+		* 
+
 -- A protocol is, simply put, a set of rules for communication.
 	
 	In order to get data over the network, for instance an E-mail from your computer 
@@ -454,44 +458,3 @@ Linux Network Layers (https://tldp.org/LDP/intro-linux/html/sect_10_01.html
 					transactions. Assume the following situation without the presence of NTP. Suppose 
 					you carry out a transaction, where your computer reads the time at 2:30 PM while 
 					the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
