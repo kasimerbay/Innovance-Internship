@@ -458,3 +458,74 @@ Linux Network Layers (https://tldp.org/LDP/intro-linux/html/sect_10_01.html
 					transactions. Assume the following situation without the presence of NTP. Suppose 
 					you carry out a transaction, where your computer reads the time at 2:30 PM while 
 					the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
+------------------------------------------------------------------------------------------------------------------------------
+Docker -- (
+		* https://youtube.com/playlist?list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs
+		* https://youtu.be/gFjxB0Jn8Wo	)
+
+	Container -- 
+		Layers of linux base image, application image with configuration
+
+		Pros
+
+				* A way to package applications awith all the necessary dependencies and configs
+			* Protible artifact easily shared nd moved around
+			* Makes development and deployement more efficient
+			* alpnine -> small data
+
+		Before Containers:
+			* Each developer needs to install the application specific version
+			* Installation process different on each OS environments
+			* Many steps where something go wrong
+			* Textual guide of deployement
+			* Configuration on the server needed
+			* External dependencies on the server OS
+		After Container:
+			* No need to download any package. Everything contained in the container environment linux based OS
+			* 
+	
+	Docker commands
+	---------------
+	* docker system prune --all
+	* docker container exec -it c3c3d03d4132 sh
+	* docker pull ...
+	* docker start ...
+	* docker run ...
+			-d -> deteached
+			-p <your port>:<container's port>
+	* docker ps
+	* docker run -p<your port>:<container's port> -d --name <custom_container_name> redis
+	* docker images
+	* docker stop ...
+	* 
+
+	IDEAS
+	-----
+		 Create a crypto currency network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

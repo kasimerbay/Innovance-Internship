@@ -2,6 +2,11 @@
 Git komutları ??? (Github - Gitlab ) ? Bitbucket
 Linux Network Katmanları
 Docker - Konteyner standartı
+
+	Volume
+	Docker Network
+	Bağımlılık
+
 CI/CD nedir / araçları nelerdir
 Scripting - ?
 
