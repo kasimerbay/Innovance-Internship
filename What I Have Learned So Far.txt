@@ -510,7 +510,7 @@ Docker -- (
 		-e environmental_settings
 		-net <NETWORK_NAME>
 		-name <CONTAINER_NAME>
-		<CONTAINER_NAME>
+		<IMAGE_NAME>
 	* 
 
 	IDEAS
