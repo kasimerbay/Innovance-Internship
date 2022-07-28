@@ -8,6 +8,7 @@ Docker - Konteyner standartı
 	Bağımlılık
 
 CI/CD nedir / araçları nelerdir
+Jenkins
 Scripting - ?
 
 ----------------------------
@@ -16,7 +17,6 @@ Devops toolları
 Monitoring - Logging
 Kubernetes
 Azure Devops
-Jenkins
 Nexus (Harbor)
 Sonarqube
 Kubernetes/Openshift/Rancher/Anthos
