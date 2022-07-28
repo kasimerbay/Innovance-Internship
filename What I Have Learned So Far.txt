@@ -469,7 +469,7 @@ Docker -- (
 		Pros
 
 				* A way to package applications awith all the necessary dependencies and configs
-			* Protible artifact easily shared nd moved around
+			* Portable artifact easily shared and moved around
 			* Makes development and deployement more efficient
 			* alpnine -> small data
 
@@ -491,12 +491,26 @@ Docker -- (
 	* docker pull ...
 	* docker start ...
 	* docker run ...
-			-d -> deteached
+			-d -> detached
 			-p <your port>:<container's port>
 	* docker ps
 	* docker run -p<your port>:<container's port> -d --name <custom_container_name> redis
 	* docker images
 	* docker stop ...
+	* docker network ls
+	* docker logs <CONTAINER_ID>
+	* docker compose
+ 
+	--------------
+
+	Network Commands
+	* docker network create <NETWORK_NAME>
+	* docker run -d \
+		-p <your port>:<container's port>
+		-e environmental_settings
+		-net <NETWORK_NAME>
+		-name <CONTAINER_NAME>
+		<CONTAINER_NAME>
 	* 
 
 	IDEAS
