@@ -461,7 +461,8 @@ Linux Network Layers (https://tldp.org/LDP/intro-linux/html/sect_10_01.html
 ------------------------------------------------------------------------------------------------------------------------------
 Docker -- (
 		* https://youtube.com/playlist?list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs
-		* https://youtu.be/gFjxB0Jn8Wo	)
+		* https://youtu.be/gFjxB0Jn8Wo	
+		* Dockerfile Video -> https://www.youtube.com/watch?v=WmcdMiyqfZs&list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs&index=10 )
 
 	Container -- 
 		Layers of linux base image, application image with configuration
@@ -486,24 +487,41 @@ Docker -- (
 	
 	Docker commands
 	---------------
+	* docker info
 	* docker system prune --all
-	* docker container exec -it c3c3d03d4132 sh
-	* docker pull ...
-	* docker start ...
-	* docker run ...
+	* docker container exec -it <CONTAINER_ID> sh//bin/bash
+	* docker container rm $(docker ps -aq) -> Tüm containerları sil
+	* docker image rm $(docker images -q -f dangling=true) -> kullanılmayan ve taglenmemiş image'lar siler
+	* docker container run -it --name <CONTAINER_NAME> <IMAGE_NAME>
+	* docker container run --rm -it --name <CONTAINER_NAME> <IMAGE_NAME> -> container oluşturur ve kullandıktan sonra siler.
+	* docker container commit <>
+	* docker container ls -a
+	* docker container inspect <CONTAINER_ID>
+	* docker container pause <CONTAINER_ID>
+	* docker container unpause <CONTAINER_ID>
+	* docker container stop <CONTAINER_NAME>/<CONTAINER_ID>
+	* docker pull <REPOSITORY_NAME>/<IMAGE_NAME>:<IMAGE_TAG>
+	* docker start <IMAGE_NAME>
+	* docker run
 			-d -> detached
 			-p <your port>:<container's port>
+			--name <custom_container_name>
+			<IAMGE_NAME>
 	* docker ps
-	* docker run -p<your port>:<container's port> -d --name <custom_container_name> redis
+	* docker ps -aq -> Tüm Container Id'lerini listele
 	* docker images
-	* docker stop ...
+	* docker image inspect <IMAGE_ID>
 	* docker network ls
-	* docker logs <CONTAINER_ID>
-	* docker compose
- 
-	--------------
+	* docker logs <CONTAINER_ID> | tail
+	* docker logs <CONTAINER_ID> -f
+	* docker rm <CONTAINER_NAME>
+	* docker rmi <IMAGE_NAME>
 
-	Network Commands
+
+	* docker compose -d -f <FILE_NAME (ınnovance.yaml) up
+	* docker compose -d -f <FILE_NAME (ınnovance.yaml) down
+ 
+	
 	* docker network create <NETWORK_NAME>
 	* docker run -d \
 		-p <your port>:<container's port>
@@ -511,7 +529,9 @@ Docker -- (
 		-net <NETWORK_NAME>
 		-name <CONTAINER_NAME>
 		<IMAGE_NAME>
-	* 
+	--------------
+
+	* docker build -t <IMAGE_NAME>:<VERSION_STATUS>
 
 	IDEAS
 	-----
