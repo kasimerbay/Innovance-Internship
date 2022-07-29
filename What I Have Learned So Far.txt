@@ -554,6 +554,7 @@ Docker -- (
 ------------------------------------------------------------------------------------------------------
 
 Jenkins - https://www.jenkins.io/doc/book/
+	- https://www.youtube.com/watch?v=pMO26j2OUME&list=PLy7NrYWoggjw_LIiDK1LXdNN82uYuuuiC
 
 	What is Java Servlet? (https://stackoverflow.com/questions/7213541/what-is-java-servlet)
 	---------------------
