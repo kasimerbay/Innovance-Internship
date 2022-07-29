@@ -105,6 +105,7 @@ GitHub - Git (https://learngitbranching.js.org/ -- Please Check)
 					
 					---------------------------
 			* git remote -v - Hangi GitHub hesabına bağlı olduğunu gösterir
+			* git remote show origin
 			* git clone <GitHub_Link>
 
 
@@ -533,11 +534,59 @@ Docker -- (
 
 	* docker build -t <IMAGE_NAME>:<VERSION_STATUS>
 
+	* docker run \
+  		--name <CONTAINER_NAME> \
+  		--rm \
+  		--detach \
+  		--privileged \
+  		--network <NETWORK_NAME> \
+  		--network-alias <HOSTNAME_IN_THE_NETWORK_SPECIFIED> \
+  		--env DOCKER_TLS_CERTDIR=/certs \
+  		--volume jenkins-docker-certs:/certs/client \
+  		--volume jenkins-data:/var/jenkins_home \
+  		--publish 2376:2376 \
+  		docker:dind \
+  		--storage-driver overlay2
+
 	IDEAS
 	-----
 		 Create a crypto currency network
+------------------------------------------------------------------------------------------------------
 
+Jenkins - https://www.jenkins.io/doc/book/
 
+	What is Java Servlet? (https://stackoverflow.com/questions/7213541/what-is-java-servlet)
+	---------------------
+		A servlet at its very core is a java class; which can handle HTTP requests. Typically the internal nitty-gritty of 
+		reading a HTTP request and response over the wire is taken care of by the containers like Tomcat. This is done so 
+		that as a server side developer you can focus on what to do with the HTTP request and responses and not bother about 
+		dealing with code that deals with networking etc. The container will take care of things like wrapping the whole 
+		thing in a HTTP response object and send it over to the client (say a browser).
+
+		Now the next logical question to ask is who decides what is a container supposed to do? And the answer is; In Java 
+		world at least It is guided (note I did not use the word controlled) by specifications. For example Servlet 
+		specifications (See resource 2) dictates what a servlet must be able to do. So if you can write an implementation 
+		for the specification, congratulations you just created a container (Technically containers like Tomcat also implement 
+		other specifications and do tricky stuff like custom class loaders etc but you get the idea).
+
+		Assuming you have a container, your servlets are now java classes whose lifecycle will be maintained by the container 
+		but their reaction to incoming HTTP requests will be decided by you. You do that by writing what-you-want-to-do in the 
+		pre-defined methods like init(), doGet(), doPost() etc. Look at Resource 3.
+
+		Here is a fun exercise for you. Create a simple servlet like in Resource 3 and write a few System.out.println() statements 
+		in it's constructor method (Yes you can have a constructor of a servlet), init(), doGet(), doPost() methods and run the 
+		servlet in tomcat. See the console logs and tomcat logs.
+	------------------------
+	
+	Important Notes
+	---------------
+		Be Careful with Command Line Parameters
+			Jenkins ignores command line parameters it doesn’t understand instead of producing an error. Be careful when using 
+			command line parameters and make sure you have the correct spelling. For example, the parameter needed for defining 
+			the Jenkins administrative user is --argumentsRealm and not --argumentRealm.
+	---------------
+
+	
 
 
 
