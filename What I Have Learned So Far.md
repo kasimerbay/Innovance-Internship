@@ -108,7 +108,8 @@ with us for now. To __clone__;
 
 * ``git push origin --delete <GIT_BRANCH_NAME>`` &rarr; Delete your branch remotely
 
->![Cutting the stick you hold](https://github.com/kasimerbay/Innovance-Internship/blob/master/1210-1240955295Hn8Q.jpg)
+>Keep that in mind! You can not delete a branch without having checked out otherwise look the below image:
+![Cutting the stick you hold](https://github.com/kasimerbay/Innovance-Internship/blob/master/1210-1240955295Hn8Q.jpg)
 
 </details>
 
