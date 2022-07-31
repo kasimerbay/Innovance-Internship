@@ -61,6 +61,8 @@ Git is an open-source, version control tool created in 2005 by developers workin
 * ``git commit`` &rarr; Let Git keeps track of your staged files
   - If you use ``git commit -m "<YOUR_COMMIT_MESSAGE>"``, you will write your commit messages directly instead of Vim editor
 
+>Do not forget to use `git add <FILE_NAME>` command before you commit
+
 Till now, we just made some changes locally. To use GitHub remotely, we will connect our local repository to remote repository with the following command;
 
 * ``git remote add origin <GitHub_PAGE_LINK>`` &rarr; Connect our local repository to remote repository
@@ -88,11 +90,25 @@ NOTE: You could first create a GitHub repository and then __clone__ it. After th
 with us for now. To __clone__;
 
 * ``git clone <GitHub_Link>`` &rarr; Clone an existing GitHub repository to your local machine.
+---
+* ``git branch`` &rarr; Lists all the existed branches. If master branch is the only branch, the output should be like below;
+  - ``
+  C:\Users\...\<Project_File>>git branch
+  ``
+  ``* master``
 
+* ``git branch <GIT_BRANCH_NAME>`` &rarr; Create a new branch called `<GIT_BRANCH_NAME>`
 
+* ``git checkout <GIT_BRANCH_NAME>`` &rarr; Change your current working branch to `<GIT_BRANCH_NAME>`
+  - ``git checkout -b <GIT_BRANCH_NAME>`` &rarr; Create a branch if not exists
 
+* ``git push origin <GIT_BRANCH_NAME>`` &rarr; Send your changes on `<GIT_BRANCH_NAME>` to remote
 
+* ``git branch -D <GIT_BRANCH_NAME>`` &rarr; Delete your current working branch locally
 
+* ``git push origin --delete <GIT_BRANCH_NAME>`` &rarr; Delete your branch remotely
+
+>![Cutting the stick you hold](https://github.com/kasimerbay/Innovance-Internship/blob/master/1210-1240955295Hn8Q.jpg)
 
 </details>
 
