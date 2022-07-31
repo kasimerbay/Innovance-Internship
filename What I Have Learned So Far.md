@@ -110,99 +110,43 @@ with us for now. To __clone__;
 
 >Keep that in mind! You can not delete a branch without having checked out otherwise look the below image:
 ![Cutting the stick you hold](https://github.com/kasimerbay/Innovance-Internship/blob/master/1210-1240955295Hn8Q.jpg)
+---
+
+* ``git merge <GIT_BRANCH_NAME>`` &rarr; Pile up your commits on `<GIT_BRANCH_NAME>` and combines your current branch
+
+* ``git pull origin master`` &rarr; Move your remote files and changes to your local
+
+* ``git rebase <GIT_BRANCH_NAME>`` &rarr; Comming Soon...
+  - Reading the official Git manual it states that rebase “reapplies commits on top o another base branch” , whereas merge “joins two or more development histories together”  In other words, the key difference between merge and rebase is that while merge preserves history as it happened, rebase rewrites it.
+
+* `` git HEAD^`` &rarr; Move your `HEAD` file upward in the commitment tree.
+
+* ``git branch -f master HEAD~3`` &rarr; Sends the HEAD to 3 commits above
 
 </details>
 
-	-------------------------
-		Git Komutları
-			{
-				(
-					git status
-					git branch
-					git log
-					git
+### My QA Session and Usefull Project Ideas
 
-					)
-
-			* mkdir Project_File
-			* touch README.md
-      * git init
-			* git add README.md
-			* git commit -m "Commit Message"
-			* git checkout -b <new_branch>
-			* git remote add origin <GitHub_Link>
-			* git push -u origin master
-			* git push origin <branch_pushed_to_be>
-
-			----- After merging the <new_branch>, use;
-				* git checkout master
-				* git branch -D <new_branch> --- for local
-				* git push origin --delete Test_Branch --- for remote
-			to delete completely the merged branch.
-
-				![Bindiğin Dalı Kesmek](C:\Users\Ahmet Kasım Erbay\Desktop\Innovance_Projects\Innovance-Internship\1210-1240955295Hn8Q.jpg)
-
-			* git pull origin master
-
-					-------------------------
-						Origin means:
-
-							You might be wondering what that "origin" word means in the command above.
-							What happens is that when you clone a remote repository to your local
-							machine, git creates an alias for you. In nearly all cases this alias is
-							called "origin."
-					--------------------------
-						Staging Environment
-
-							Commits make up the essence of your project and allow you to jump to the
-							state of a project at any other commit. So, how do you tell git which files
-							to put into a commit? This is where the staging environment or index come in.
-							As seen in Step 2, when you make changes to your repo, git notices that a
-							file has changed but won't do anything with it (like adding it in a commit).
-					--------------------------
-						Hash Code
-
-							A hash function is any function that can be used to map data of arbitrary
-							size to fixed-size values.The values returned by a hash function are called
-							hash values, hash codes, digests, or simply hashes.
-					--------------------------
-						Rebase and Merge Commands
-
-							Reading the official Git manual it states that rebase “reapplies commits on
-							top of another base branch” , whereas merge “joins two or more development
-							histories together” . In other words, the key difference between merge and
-							rebase is that while merge preserves history as it happened, rebase rewrites
-							it.
-					---------------------------
-						Moving Upward in Commit Tree
-
-							* git HEAD^
-							* git branch -f master HEAD~3 - Sends the HEAD to 3 commits above
-					---------------------------
-						Can I create my own Version Control System?
-
-					---------------------------
-			* git remote -v - Hangi GitHub hesabına bağlı olduğunu gösterir
-			* git remote show origin
-			* git clone <GitHub_Link>
-
-
-				}
-
-
+1. Can I create my own Version Control System?
+  - [Answer](https://ericsink.com/entries/time_space_tradeoffs.html)
+2. Chat Application Using Raspberry Pi
+  - To understand the network layers
 ----------------------------------------------------------------------------
-Linux Network Layers (https://tldp.org/LDP/intro-linux/html/sect_10_01.html
-			https://linux-kernel-labs.github.io/refs/heads/master/labs/networking.html
-			https://www.linux.com/topic/networking/practical-networking-linux-admins-tcpip/
-			* https://www.geeksforgeeks.org/tcp-ip-model/?ref=lbp)
 
-	-- SOME PROJECTS ABOUT NETWORKING
-		* Chat Application Using Raspberry Pi
-		*
+<details>
+  <summary><font size=4>Linux Network Layers</font></summary>
 
--- A protocol is, simply put, a set of rules for communication.
+### Resources to Be Summarized
 
-	In order to get data over the network, for instance an E-mail from your computer
+* <https://tldp.org/LDP/intro-linux/html/sect_10_01.html>
+* <https://linux-kernel-labs.github.io/refs/heads/master/labs/networking.html>
+* <https://www.linux.com/topic/networking/practical-networking-linux-admins-tcpip/>
+* <https://www.geeksforgeeks.org/tcp-ip-model/?ref=lbp>
+
+### Frequently Used Terms
+
+* A protocol is, simply put, a set of rules for communication.
+  - In order to get data over the network, for instance an E-mail from your computer
 	to some computer at the other end of the world, lots of different hard- and software
 	needs to work together.
 
@@ -217,15 +161,27 @@ Linux Network Layers (https://tldp.org/LDP/intro-linux/html/sect_10_01.html
 	All these different types of communication protocols are classified in 7 layers, which are
 	known as the Open Systems Interconnection Reference Model, the OSI Model for short.
 
-	BASIC COMPUTER NETWORK
-	----------------------
+* ``hostname`` &rarr; this displays the hostname of your machine.
+* ``ifconfig`` &rarr; this gives us the IP address of the device.
+* ``netstat -a`` &rarr; this lists all the ports being used.
 
-		* hostname -- this displays the hostname of your machine.
-		* ifconfig -- this gives us the IP address of the device.
-		* netstat -a -- this lists all the ports being used.
-		------------------------
-		Socket: The unique combination of IP address and Port number together are termed as Socket.
-		------------------------
+* The unique combination of IP address and Port number together are termed as **Socket**.
+
+---
+# The OSI Model's Layers
+
+1. Physical Layer
+  * The physical layer refers to your networking hardware: **Ethernet** and **wi-fi interfaces**, **cabling**, **switches**, whatever gadgets it takes to move your bits and the electricity to operate them.
+
+
+  <font size=4>The Functions of Physical Layer</font>
+    - Bit Synchronization
+    - Bit Rate Control
+    - Physical Topologies
+    - Transmission Mode
+
+</details>
+
 
 	The OSI MODEL'S LAYERS
 	----------------------------------------------------------------------------------------
