@@ -12,11 +12,11 @@
 
 ### This Section Inclued Some Terms That You Will Face Frequently
 
-* [HELM](https://www.freecodecamp.org/news/what-is-a-helm-chart-tutorial-for-kubernetes-beginners/)
+* [**HELM**](https://www.freecodecamp.org/news/what-is-a-helm-chart-tutorial-for-kubernetes-beginners/)
 
-* [What is a .yaml File and Where to Use It?](https://medium.com/codex/docker-compose-explained-3954baf495ec)
+* [What is a **.yaml** File and Where to Use It?](https://medium.com/codex/docker-compose-explained-3954baf495ec)
 
-* You should learn [Vim](https://www.openvim.com/).
+* **Hash Code** &rarr; A hash function is any function that can be used to map data of arbitrary size to fixed-size values.The values returned by a hash function are called hash values, hash codes, digests, or simply hashes.
 
 </details>
 
@@ -28,6 +28,7 @@
 Vim is a text editor for Unix that comes with Linux, BSD, and macOS. It is known to be fast and powerful, partly because it is a small program that can run in a terminal (although it has a graphical interface). It is mainly because it can be managed entirely without menus or a mouse with a keyboard.
 
 * [What is Vim and It's Power?](https://www.loginradius.com/blog/engineering/vim-getting-started/)
+* You should learn [Vim](https://www.openvim.com/).
 
 </details>
 
@@ -44,6 +45,55 @@ Git is an open-source, version control tool created in 2005 by developers workin
 
 * [Reading Material About Basic Git Commands](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 
+<font size=4>**Quick Git Tutorial**</font>
+
+  \* Following the below commands below shows a quick tour for creating and using Git and GitHub locally and remotely
+
+* ``mkdir <Project_File>`` &rarr; Create a directory in current working direcory
+* ``touch README.md`` &rarr; Create a README file
+
+> At this point you have a directory called `Project_File` which includes `README.md` file. We used Linux Bash Commands to handle above commands.
+
+>For more information please learn linux commands. [Learning Linux commands](https://www.hostinger.com/tutorials/linux-commands) will boost your Git experience and the tools we will examine later.
+
+* ``git init`` &rarr; Convert your directory to a Git repository
+* ``git add README.md`` &rarr; Add your editted file/s to the [Staging Environment](https://www.geeksforgeeks.org/staging-in-git/)
+* ``git commit`` &rarr; Let Git keeps track of your staged files
+  - If you use ``git commit -m "<YOUR_COMMIT_MESSAGE>"``, you will write your commit messages directly instead of Vim editor
+
+Till now, we just made some changes locally. To use GitHub remotely, we will connect our local repository to remote repository with the following command;
+
+* ``git remote add origin <GitHub_PAGE_LINK>`` &rarr; Connect our local repository to remote repository
+  - Till now, we just made some changes locally. This command connects our local repository to remote one.
+
+  - Be carefull ! You need to sign up to GitHub for this step. <GitHub_PAGE_LINK> are provided by GitHub itself.
+
+* ``git remote -v`` &rarr; Check which GitHub account you are connected to.
+
+  - This command should give an output like below. Otherwise go and check some stackoverflow pages for salvation.
+
+  ``
+  origin  https://github.com/<USER_NAME>/<REPOSITORY_NAME>.git (fetch)
+  ``
+  ``
+  origin  https://github.com/<USER_NAME>/<REPOSITORY_NAME>.git (push)
+  ``
+
+>You might be wondering what that __origin__ word means in the command above. What happens is that when you clone a remote repository to your local machine, Git creates an alias for you. In nearly all cases this alias is called __origin__.
+
+* ``git push origin master`` &rarr;  Send your local commits to GitHub and Voila! You are a Git master now. Not the branch one!
+
+---
+NOTE: You could first create a GitHub repository and then __clone__ it. After that you would be at the same page
+with us for now. To __clone__;
+
+* ``git clone <GitHub_Link>`` &rarr; Clone an existing GitHub repository to your local machine.
+
+
+
+
+
+
 </details>
 
 	-------------------------
@@ -59,6 +109,7 @@ Git is an open-source, version control tool created in 2005 by developers workin
 
 			* mkdir Project_File
 			* touch README.md
+      * git init
 			* git add README.md
 			* git commit -m "Commit Message"
 			* git checkout -b <new_branch>
