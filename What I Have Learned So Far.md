@@ -128,7 +128,7 @@ with us for now. To __clone__;
 <details>
   <summary><font size=4>Linux Network Layers</font></summary>
 
-### Resources to Be Summarized
+### Resources to Summarize Linux Network Layers
 
 * <https://tldp.org/LDP/intro-linux/html/sect_10_01.html>
 * <https://linux-kernel-labs.github.io/refs/heads/master/labs/networking.html>
@@ -137,7 +137,7 @@ with us for now. To __clone__;
 
 ### Frequently Used Terms
 
-* A protocol is, simply put, a set of rules for communication.
+* A _protocol_ is, simply put, a set of rules for communication.
   - In order to get data over the network, for instance an E-mail from your computer
 	to some computer at the other end of the world, lots of different hard- and software
 	needs to work together.
@@ -151,7 +151,7 @@ with us for now. To __clone__;
 	E-mail from one appliance to the other, all the way to the destination computer.
 
 	All these different types of communication protocols are classified in 7 layers, which are
-	known as the Open Systems Interconnection Reference Model, the OSI Model for short.
+	known as _the Open Systems Interconnection Reference Model_, **the OSI Model** for short.
 
 * ``hostname`` &rarr; this displays the hostname of your machine.
 * ``ifconfig`` &rarr; this gives us the IP address of the device.
@@ -271,124 +271,88 @@ with us for now. To __clone__;
   * This layer also serves as a window for the application services to access the network and for displaying the received information to the user.
     - The application layer includes the network protocols you use every day: SSH, TLS/SSL, HTTP, IMAP, SMTP, DNS, DHCP, streaming media protocols, and tons more.
 
+<font size=4>**Basic Dynamic of The Layer System**</font>
+    Each layer can only use the functionality of the layer below; each layer can only export functionality to the layer above. In other words: layers communicate only with adjacent layers. Let's take the example of your E-mail message again: you enter it through the application layer. In your computer, it travels down the transport and network layer. Your computer puts it on the network through the network access layer. That is also the layer that will move the message around the world. At the destination, the receiving computer will accept the message through it's own network layer, and will display it to the recepient using the transport and application layer.
+
+><font size=3>OSI model acts as a reference model and is not implemented on the Internet because of its late invention. The current model being used is _**the TCP/IP Model**_.</font>
+
+><font size=3><ins>TCP/IP MODEL</ins></font>
+  It was designed and developed by Department of Defense (DoD) in 1960s and is based on standard protocols. It stands for Transmission Control Protocol/Internet Protocol. _The TCP/IP model is a concise version of the OSI Model_.
+
+
+### The TCP/IP MODEL'S LAYERS <font size=0.5>(on the behalf of the receiver)</font>
+
+1. **Network Access Layer**
+  * This layer corresponds to the combination of Data Link Layer and Physical Layer of the OSI model. It looks out for hardware addressing and the protocols present in this layer allows for the physical transmission of data.
+
+2. **Internet Layer**
+  * This layer parallels the functions of OSI’s Network layer. It defines the protocols which are responsible for logical transmission of data over the entire network.
+
+    <ins><font size=4>**The Main Protocols Residing at Internet Layer**</font></ins>
+        - _IP_
+          stands for Internet Protocol and it is responsible for delivering packets from the source host to the destination host by looking at the IP addresses in the packet headers.
+
+          IP has 2 versions:
+          IPv4 and IPv6. IPv4 is the one that most of the websites are using currently. But IPv6 is growing as the number of IPv4 addresses are limited in number when compared to the number of users.
+          - ICMP
+            stands for Internet Control Message Protocol. It is encapsulated within IP datagrams and is responsible for providing hosts with information about network problems.
+
+          - ARP
+            stands for Address Resolution Protocol. Its job is to find the hardware address of a host from a known IP address.    
+
+              ARP has several types:
+              1. Reverse ARP,
+              2. Proxy ARP,
+              3. Gratuitous ARP,
+              4. Inverse ARP
+
+3. **Host To Host Layer**
+  * This layer is analogous to the transport layer of the OSI model. It is responsible for end-to-end communication and error-free delivery of data. It shields the upper-layer applications from the complexities of data.
+
+    <ins><font size=4>**The Two Main Protocols Present in Host To Host Layer**</font></ins>
+
+      - _Transmission Control Protocol (TCP)
+        It is known to provide reliable and error-free communication between end systems. It performs sequencing and segmentation of data. It also has acknowledgment feature and controls the flow of the data through flow control mechanism. It is a very effective protocol but has a lot of overhead due to such features. Increased overhead leads to increased cost.
+
+      - _User Datagram Protocol (UDP)_
+        On the other hand does not provide any such features. It is the go-to protocol if your application does not require reliable transport as it is very cost-effective. Unlike TCP, which is connection-oriented protocol, UDP is connectionless.
+
+4. **Application Layer**
+  * This layer performs the functions of top three layers of the OSI model: Application, Presentation and Session Layer. It is responsible for node-to-node communication and controls user-interface specifications.  
+
+    <ins><font size=4>**Some of The Protocols Present in Application Layer**</font></ins>
+        * HTTP,
+        * HTTPS,
+        * FTP,
+        * TFTP,
+        * Telnet,
+        * SSH,
+        * SMTP,
+        * SNMP,
+        * NTP,
+        * DNS,
+        * DHCP,
+        * NFS,
+        * X Window,
+        * LPD.   
+
+    _HTTP and HTTPS_
+      HTTP stands for Hypertext transfer protocol. It is used by the World Wide Web to manage communications between web browsers and servers. HTTPS stands for HTTP-Secure. It is a combination of HTTP with SSL(Secure Socket Layer). It is efficient in cases where the browser need to fill out forms, sign in, authenticate and carry out bank transactions.
+
+		_SSH_
+      SSH stands for Secure Shell. It is a terminal emulations software similar to Telnet. The reason SSH is more preferred is because of its ability to maintain the encrypted connection. It sets up a secure session over a TCP/IP connection.
+
+    _NTP_
+      NTP stands for Network Time Protocol. It is used to synchronize the clocks on our computer to one standard time source. It is very useful in situations like bank transactions. Assume the following situation without the presence of NTP. Suppose you carry out a transaction, where your computer reads the time at 2:30 PM while the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
+
 </details>
 
-	-------------------------------------------------------------------------------------------
-
-	GENERAL NOTES On LAYERS
-
-		How It Works?
-
-			-- Each layer can only use the functionality of the layer below; each layer
-			can only export functionality to the layer above. In other words:
-			layers communicate only with adjacent layers. Let's take the example of your
-			E-mail message again: you enter it through the application layer.
-			In your computer, it travels down the transport and network layer.
-			Your computer puts it on the network through the network access layer.
-			That is also the layer that will move the message around the world. At the
-			destination, the receiving computer will accept the message through it's own
-			network layer, and will display it to the recepient using the transport and
-			application layer.
-
-		* OSI model acts as a reference model and is not implemented on the Internet because of its
-		late invention. The current model being used is the TCP/IP model.
-	--------------------------------------------------------------------------------------------
-
-	TCP/IP MODEL
-	------------
-		--  it was designed and developed by Department of Defense (DoD) in 1960s and is based on standard
-		protocols. It stands for Transmission Control Protocol/Internet Protocol. The TCP/IP model is a
-		concise version of the OSI model.
+---
 
 
-	The TCP/IP MODEL'S LAYERS (on the behalf of the receiver)
-	-------------------------
-
-		1. Network Access Layer
-			-- This layer corresponds to the combination of Data Link Layer and Physical Layer of the
-			OSI model. It looks out for hardware addressing and the protocols present in this layer
-			allows for the physical transmission of data.
-
-		2. Internet Layer
-			-- This layer parallels the functions of OSI’s Network layer. It defines the protocols which
-			are responsible for logical transmission of data over the entire network.
-				The main protocols residing at this layer are :
-
-					a. IP –
-						stands for Internet Protocol and it is responsible for delivering
-						packets from the source host to the destination host by looking at
-						the IP addresses in the packet headers.
-
-							IP has 2 versions:
-								IPv4 and IPv6. IPv4 is the one that most of the
-								websites are using currently. But IPv6 is growing as
-								the number of IPv4 addresses are limited in number when
-								compared to the number of users.
-
-					b. ICMP –
-						stands for Internet Control Message Protocol. It is encapsulated within
-						IP datagrams and is responsible for providing hosts with information
-						about network problems.
-
-					c. ARP –
-						stands for Address Resolution Protocol. Its job is to find the hardware
-						address of a host from a known IP address.
-
-							ARP has several types:
-
-								Reverse ARP,
-								Proxy ARP,
-								Gratuitous ARP,
-								Inverse ARP.
-
-		3. Host To Host Layer
-			-- This layer is analogous to the transport layer of the OSI model. It is responsible for end-to-end
-			communication and error-free delivery of data. It shields the upper-layer applications from the
-			complexities of data.
-				The two main protocols present in this layer are :
-
-					Transmission Control Protocol (TCP) –
-						It is known to provide reliable and error-free communication between end
-						systems. It performs sequencing and segmentation of data. It also has
-						acknowledgment feature and controls the flow of the data through flow control
-						mechanism. It is a very effective protocol but has a lot of overhead due to
-						such features. Increased overhead leads to increased cost.
-
-					User Datagram Protocol (UDP) –
-						On the other hand does not provide any such features. It is the go-to protocol
-						if your application does not require reliable transport as it is very
-						cost-effective. Unlike TCP, which is connection-oriented protocol,
-						UDP is connectionless.
-
-		4. Application Layer
-			-- This layer performs the functions of top three layers of the OSI model: Application, Presentation
-			and Session Layer. It is responsible for node-to-node communication and controls user-interface
-			specifications. Some of the protocols present in this layer are: HTTP, HTTPS, FTP, TFTP, Telnet,
-			SSH, SMTP, SNMP, NTP, DNS, DHCP, NFS, X Window, LPD.
-
-				* HTTP and HTTPS –
-					HTTP stands for Hypertext transfer protocol. It is used by the World Wide Web to
-					manage communications between web browsers and servers. HTTPS stands for HTTP-Secure.
-					It is a combination of HTTP with SSL(Secure Socket Layer). It is efficient in cases
-					where the browser need to fill out forms, sign in, authenticate and carry out bank
-					transactions.
-
-				* SSH –
-					SSH stands for Secure Shell. It is a terminal emulations software similar to Telnet.
-					The reason SSH is more preferred is because of its ability to maintain the encrypted
-					connection. It sets up a secure session over a TCP/IP connection.
-
-				* NTP –
-					NTP stands for Network Time Protocol. It is used to synchronize the clocks on our
-					computer to one standard time source. It is very useful in situations like bank
-					transactions. Assume the following situation without the presence of NTP. Suppose
-					you carry out a transaction, where your computer reads the time at 2:30 PM while
-					the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
-------------------------------------------------------------------------------------------------------------------------------
-Docker -- (
-		* https://youtube.com/playlist?list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs
-		* https://youtu.be/gFjxB0Jn8Wo
-		* Dockerfile Video -> https://www.youtube.com/watch?v=WmcdMiyqfZs&list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs&index=10 )
+# Docker
+* [Nana Docker Tutorials](https://youtube.com/playlist?list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs)
+* [thenewboston](https://youtube.com/playlist?list=PL6gx4Cwl9DGBkvpSIgwchk0glHLz7CQ-7) - <font size=0.5>**Personal Favourite**</font>
 
 	Container --
 		Layers of linux base image, application image with configuration
