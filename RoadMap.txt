@@ -9,6 +9,7 @@ Docker - Konteyner standartı
 
 CI/CD nedir / araçları nelerdir
 Jenkins
+
 Scripting - ?
 
 ----------------------------
@@ -21,7 +22,7 @@ Nexus (Harbor)
 Sonarqube
 Kubernetes/Openshift/Rancher/Anthos
 Gitlab
-ELK-EFK (ELasticsearc Logstash-kibana / Eleasticsearch-fluend-Kibana) 
+ELK-EFK (ELasticsearc Logstash-kibana / Eleasticsearch-fluend-Kibana)
 Grafana-Prometheus
 Terraform (Cloud)
 Ansible (UI-Tower (free AWX)
