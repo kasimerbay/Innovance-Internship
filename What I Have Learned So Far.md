@@ -1,5 +1,4 @@
-[//]: # (<details>
-  <summary><font size=4></font></summary></details>)
+[//]: # (<details><summary><font size=4></font></summary></details>)
 
 
 # What I Have Learned So Far
