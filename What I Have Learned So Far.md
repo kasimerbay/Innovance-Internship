@@ -1,3 +1,9 @@
+[//]: # (<details>
+  <summary><font size=4>Docker</font></summary>
+
+         </details>)
+
+
 # What I Have Learned So Far
 
 <details>
@@ -335,7 +341,7 @@ with us for now. To __clone__;
         * DHCP,
         * NFS,
         * X Window,
-        * LPD.   
+        * LPD
 
     _HTTP and HTTPS_
       HTTP stands for Hypertext transfer protocol. It is used by the World Wide Web to manage communications between web browsers and servers. HTTPS stands for HTTP-Secure. It is a combination of HTTP with SSL(Secure Socket Layer). It is efficient in cases where the browser need to fill out forms, sign in, authenticate and carry out bank transactions.
@@ -347,8 +353,6 @@ with us for now. To __clone__;
       NTP stands for Network Time Protocol. It is used to synchronize the clocks on our computer to one standard time source. It is very useful in situations like bank transactions. Assume the following situation without the presence of NTP. Suppose you carry out a transaction, where your computer reads the time at 2:30 PM while the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
 
 </details>
-
-[//]: # (This may be the most platform independent comment)
 
 <details>
   <summary><font size=4>Docker</font></summary>
@@ -367,15 +371,15 @@ with us for now. To __clone__;
   3. Makes development and deployement more efficient
   4. alpnine -> Smaller Data is enough for you to take action.
 
-**Before Containers**:
+**Before Containers**
   1. Each developer needs to install the application specific version
-	2. Installation process different on each OS environments
+  2. Installation process different on each OS environments
   3. Many steps where something go wrong
   4. Textual guide of deployement
   5. Configuration on the server needed
-	6. External dependencies on the server OS
+  6. External dependencies on the server OS
 
-**After Container**:
+**After Container**
  * No need to download any package. Everything contained in the container environment linux based OS
 
 <font size=4>**Quick Docker Tutorial**</font>
@@ -386,7 +390,7 @@ with us for now. To __clone__;
 
 * `docker container exec -it <CONTAINER_ID> sh or "bin/bash"` &rarr; Runs the image to create a container with interactive Bash session
 
-* `docker container exec -it <CONTAINER_ID> sh (bin/bash)` &rarr; Delete all the containers
+* `docker container exec -it <CONTAINER_ID> sh (bin/bash)` &rarr; Run the container with a interactive Bash session
 
 * `docker image rm $(docker images -q -f dangling=true)` &rarr; Delete unused and untagged containers
 
@@ -408,7 +412,7 @@ with us for now. To __clone__;
 * `docker start <IMAGE_NAME>` &rarr; Start your image as a container
 
 * ``docker run -d -p <YOUR_DEVICE_PORT>:<CONTAINER_PORT> --name <CONTAINER_NAME> <IAMGE_NAME>
-`` &rarr; Start your containener in deteached mode with `-d`  and give custom ports with `-p`
+`` &rarr; Start your container in deteached mode with `-d`  and give custom ports with `-p`
 
 * `docker ps` &rarr; Lists running containers
 
@@ -431,8 +435,7 @@ with us for now. To __clone__;
 <font size=1>You can use compose to build and manage multiple services in Docker containers. </font>
 
 * `docker compose -d -f <FILE_NAME>.yaml up` &rarr; Get the multiple services up with `docker compose`
-  - `docker compose -d -f <FILE_NAME>.yaml down` &rarr; Stops the containers included inside the .yaml file.   
-<br>   
+  - `docker compose -d -f <FILE_NAME>.yaml down` &rarr; Stops the containers included inside the .yaml file.     
 
   <ins>NOTE</ins>: When `docker compose` command runs, it creates a docker network and all the included services runs inside this network. After running `docker compose ... down` the network is deleted automatically.
 
@@ -446,6 +449,11 @@ with us for now. To __clone__;
 
 >Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession. This page describes the commands you can use in a Dockerfile. When you are done reading this page, refer to the Dockerfile [Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) for a tip-oriented guide.
 
+<font size=2.5>**Docker Volume Types**</font> - Given to the `docker run` with `-v` tag
+1. Host Volume
+2. Anonymous Volume
+3. Named Volume &rarr; Let the docker manage files we provide
+
 </details>
 
 <details>
@@ -453,6 +461,7 @@ with us for now. To __clone__;
 
 <font size=4>**Useful Links for Learning Jenkins**</font>
   - <https://www.jenkins.io/doc/book/>
+  |  <font size=0.5>This link includes all the necessary processes to use Jenkins</font>
   - <https://www.youtube.com/watch?v=pMO26j2OUME&list=PLy7NrYWoggjw_LIiDK1LXdNN82uYuuuiC>
 
 ### Frequently Used Terms
@@ -466,12 +475,14 @@ with us for now. To __clone__;
 
   Here is a fun exercise for you. Create a simple servlet like in Resource 3 and write a few System.out.println() statements in it's constructor method (Yes you can have a constructor of a servlet), init(), doGet(), doPost() methods and run the servlet in tomcat. See the console logs and tomcat logs.
 
-
 <ins><font size=4>Important Notes</font></ins>
 * Be Careful with Command Line Parameters. Jenkins ignores command line parameters it doesn’t understand instead of producing an error. Be careful when using command line parameters and make sure you have the correct spelling. For example, the parameter needed for defining the Jenkins administrative user is --argumentsRealm and not --argumentRealm.
 
 </details>
----------------
+
+[//]: # (the Last Code I Run -- docker run -p8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts)
+
+---
 
 ### My QA Session and Usefull Project Ideas
 
