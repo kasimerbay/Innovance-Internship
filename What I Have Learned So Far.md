@@ -130,6 +130,7 @@ with us for now. To __clone__;
 
 ### Resources to Summarize Linux Network Layers
 
+
 * <https://tldp.org/LDP/intro-linux/html/sect_10_01.html>
 * <https://linux-kernel-labs.github.io/refs/heads/master/labs/networking.html>
 * <https://www.linux.com/topic/networking/practical-networking-linux-admins-tcpip/>
@@ -347,134 +348,129 @@ with us for now. To __clone__;
 
 </details>
 
----
+[//]: # (This may be the most platform independent comment)
 
+<details>
+  <summary><font size=4>Docker</font></summary>
 
-# Docker
+<font size=4>**Useful Links for Learning Docker**</font>
+
 * [Nana Docker Tutorials](https://youtube.com/playlist?list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs)
 * [thenewboston](https://youtube.com/playlist?list=PL6gx4Cwl9DGBkvpSIgwchk0glHLz7CQ-7) - <font size=0.5>**Personal Favourite**</font>
 
-	Container --
-		Layers of linux base image, application image with configuration
-
-		Pros
-
-				* A way to package applications awith all the necessary dependencies and configs
-			* Portable artifact easily shared and moved around
-			* Makes development and deployement more efficient
-			* alpnine -> small data
-
-		Before Containers:
-			* Each developer needs to install the application specific version
-			* Installation process different on each OS environments
-			* Many steps where something go wrong
-			* Textual guide of deployement
-			* Configuration on the server needed
-			* External dependencies on the server OS
-		After Container:
-			* No need to download any package. Everything contained in the container environment linux based OS
-			*
-
-	Docker commands
-	---------------
-	* docker info
-	* docker system prune --all
-	* docker container exec -it <CONTAINER_ID> sh//bin/bash
-	* docker container rm $(docker ps -aq) -> Tüm containerları sil
-	* docker image rm $(docker images -q -f dangling=true) -> kullanılmayan ve taglenmemiş image'lar siler
-	* docker container run -it --name <CONTAINER_NAME> <IMAGE_NAME>
-	* docker container run --rm -it --name <CONTAINER_NAME> <IMAGE_NAME> -> container oluşturur ve kullandıktan sonra siler.
-	* docker container commit <>
-	* docker container ls -a
-	* docker container inspect <CONTAINER_ID>
-	* docker container pause <CONTAINER_ID>
-	* docker container unpause <CONTAINER_ID>
-	* docker container stop <CONTAINER_NAME>/<CONTAINER_ID>
-	* docker pull <REPOSITORY_NAME>/<IMAGE_NAME>:<IMAGE_TAG>
-	* docker start <IMAGE_NAME>
-	* docker run
-			-d -> detached
-			-p <your port>:<container's port>
-			--name <custom_container_name>
-			<IAMGE_NAME>
-	* docker ps
-	* docker ps -aq -> Tüm Container Id'lerini listele
-	* docker images
-	* docker image inspect <IMAGE_ID>
-	* docker network ls
-	* docker logs <CONTAINER_ID> | tail
-	* docker logs <CONTAINER_ID> -f
-	* docker rm <CONTAINER_NAME>
-	* docker rmi <IMAGE_NAME>
+>Container is layers of linux base image, application image with configuration
 
 
-	* docker compose -d -f <FILE_NAME (ınnovance.yaml) up
-	* docker compose -d -f <FILE_NAME (ınnovance.yaml) down
+**Docker Pros**
+  1. A way to package applications awith all the necessary dependencies and configs
+  2. Portable artifact easily shared and moved around
+  3. Makes development and deployement more efficient
+  4. alpnine -> Smaller Data is enough for you to take action.
+
+**Before Containers**:
+  1. Each developer needs to install the application specific version
+	2. Installation process different on each OS environments
+  3. Many steps where something go wrong
+  4. Textual guide of deployement
+  5. Configuration on the server needed
+	6. External dependencies on the server OS
+
+**After Container**:
+ * No need to download any package. Everything contained in the container environment linux based OS
+
+<font size=4>**Quick Docker Tutorial**</font>
+<font size=0.5>* This document is just to provide a quick orientation for Docker. Please go and do a research or watch the video tutorials given above </font>
+* `docker info` &rarr; Prompts system information and Server connection to Docker Hub
+
+* `docker system prune --all` &rarr; Deletes all the containers whether it is up or down
+
+* `docker container exec -it <CONTAINER_ID> sh or "bin/bash"` &rarr; Runs the image to create a container with interactive Bash session
+
+* `docker container exec -it <CONTAINER_ID> sh (bin/bash)` &rarr; Delete all the containers
+
+* `docker image rm $(docker images -q -f dangling=true)` &rarr; Delete unused and untagged containers
+
+* `docker container run -it --name <CONTAINER_NAME> <IMAGE_NAME>` &rarr; Run `<CONTAINER_NAME>` with interactive Bash session using `<IMAGE_NAME>`
+
+* `docker container ls -a` &rarr; Lists all containers
+
+* `docker container inspect <CONTAINER_ID>` &rarr; Displays detailed information on one or more containers
+
+* `docker container pause <CONTAINER_ID>` &rarr; Pause a running container
+
+* `docker container unpause <CONTAINER_ID>` &rarr; Unpause a running container
+
+* `docker container stop <CONTAINER_NAME>/<CONTAINER_ID>` &rarr; Stops a running container. Can be started again with
+  - `docker start <CONTAINER_NAME>`
+
+* `docker pull <REPOSITORY_NAME>/<IMAGE_NAME>:<IMAGE_TAG>` &rarr; Pull your image to your local
+
+* `docker start <IMAGE_NAME>` &rarr; Start your image as a container
+
+* ``docker run -d -p <YOUR_DEVICE_PORT>:<CONTAINER_PORT> --name <CONTAINER_NAME> <IAMGE_NAME>
+`` &rarr; Start your containener in deteached mode with `-d`  and give custom ports with `-p`
+
+* `docker ps` &rarr; Lists running containers
+
+* `docker ps -aq` &rarr; Lists all container Id's
+
+* `docker images` &rarr; Lists images
+
+* `docker image inspect <IMAGE_ID>` &rarr; Display detailed information on images
+
+* `docker network ls` &rarr; Lists networks
+
+* `docker logs <CONTAINER_ID> | tail` &rarr; Displays logs from the last entry
+  - `docker logs <CONTAINER_ID> -f` &rarr; You can add dashes to see streaming logs
+
+* `docker rm <CONTAINER_NAME>` &rarr; Remove specified container
+
+* `docker rmi <IMAGE_NAME>` &rarr; Remove specified image
+
+<font size=3>**Docker Compose**</font>
+<font size=1>You can use compose to build and manage multiple services in Docker containers. </font>
+
+* `docker compose -d -f <FILE_NAME>.yaml up` &rarr; Get the multiple services up with `docker compose`
+  - `docker compose -d -f <FILE_NAME>.yaml down` &rarr; Stops the containers included inside the .yaml file.   
+<br>   
+
+  <ins>NOTE</ins>: When `docker compose` command runs, it creates a docker network and all the included services runs inside this network. After running `docker compose ... down` the network is deleted automatically.
+
+> Here is a [example](https://github.com/kasimerbay/Innovance-Internship/blob/master/default.yaml) docker compose file (.yaml). Using this file makes managing and configuring containers easier.
+
+* `docker network create <NETWORK_NAME>` &rarr; Create a network called `<NETWORK_NAME>`
+
+* ` docker run -d -p <YOUR_DEVICE_PORT>:<CONTAINER_PORT> -e environmental_settings -net <NETWORK_NAME> -name <CONTAINER_NAME> <IMAGE_NAME>` &rarr;
+
+* `docker build -t <IMAGE_NAME>:<VERSION_STATUS>` &rarr; Create an image file from a Dockerfile
+
+>Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession. This page describes the commands you can use in a Dockerfile. When you are done reading this page, refer to the Dockerfile [Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) for a tip-oriented guide.
+
+</details>
+-----------------------------------------------------------------------------------------------------
+
+### Jenkins
+
+<font size=4>**Useful Links for Learning Jenkins**</font>
+  - <https://www.jenkins.io/doc/book/>
+  - <https://www.youtube.com/watch?v=pMO26j2OUME&list=PLy7NrYWoggjw_LIiDK1LXdNN82uYuuuiC>
+
+### Frequently Used Terms
+
+* [What is Java Servlet?](https://stackoverflow.com/questions/7213541/what-is-java-servlet)
+  A servlet at its very core is a java class; which can handle HTTP requests. Typically the internal nitty-gritty of reading a HTTP request and response over the wire is taken care of by the containers like Tomcat. This is done so that as a server side developer you can focus on what to do with the HTTP request and responses and not bother about dealing with code that deals with networking etc. The container will take care of things like wrapping the whole thing in a HTTP response object and send it over to the client (say a browser).
+
+  Now the next logical question to ask is who decides what is a container supposed to do? And the answer is; In Java world at least It is guided (note I did not use the word controlled) by specifications. For example Servlet specifications (See resource 2) dictates what a servlet must be able to do. So if you can write an implementation for the specification, congratulations you just created a container (Technically containers like Tomcat also implement other specifications and do tricky stuff like custom class loaders etc but you get the idea).
+
+  Assuming you have a container, your servlets are now java classes whose lifecycle will be maintained by the container but their reaction to incoming HTTP requests will be decided by you. You do that by writing what-you-want-to-do in the pre-defined methods like init(), doGet(), doPost() etc. Look at Resource 3.
+
+  Here is a fun exercise for you. Create a simple servlet like in Resource 3 and write a few System.out.println() statements in it's constructor method (Yes you can have a constructor of a servlet), init(), doGet(), doPost() methods and run the servlet in tomcat. See the console logs and tomcat logs.
 
 
-	* docker network create <NETWORK_NAME>
-	* docker run -d \
-		-p <your port>:<container's port>
-		-e environmental_settings
-		-net <NETWORK_NAME>
-		-name <CONTAINER_NAME>
-		<IMAGE_NAME>
-	--------------
+<ins><font size=4>Important Notes</font></ins>
+* Be Careful with Command Line Parameters. Jenkins ignores command line parameters it doesn’t understand instead of producing an error. Be careful when using command line parameters and make sure you have the correct spelling. For example, the parameter needed for defining the Jenkins administrative user is --argumentsRealm and not --argumentRealm.
 
-	* docker build -t <IMAGE_NAME>:<VERSION_STATUS>
-
-	* docker run \
-  		--name <CONTAINER_NAME> \
-  		--rm \
-  		--detach \
-  		--privileged \
-  		--network <NETWORK_NAME> \
-  		--network-alias <HOSTNAME_IN_THE_NETWORK_SPECIFIED> \
-  		--env DOCKER_TLS_CERTDIR=/certs \
-  		--volume jenkins-docker-certs:/certs/client \
-  		--volume jenkins-data:/var/jenkins_home \
-  		--publish 2376:2376 \
-  		docker:dind \
-  		--storage-driver overlay2
-
-	IDEAS
-	-----
-		 Create a crypto currency network
-------------------------------------------------------------------------------------------------------
-
-Jenkins - https://www.jenkins.io/doc/book/
-	- https://www.youtube.com/watch?v=pMO26j2OUME&list=PLy7NrYWoggjw_LIiDK1LXdNN82uYuuuiC
-
-	What is Java Servlet? (https://stackoverflow.com/questions/7213541/what-is-java-servlet)
-	---------------------
-		A servlet at its very core is a java class; which can handle HTTP requests. Typically the internal nitty-gritty of
-		reading a HTTP request and response over the wire is taken care of by the containers like Tomcat. This is done so
-		that as a server side developer you can focus on what to do with the HTTP request and responses and not bother about
-		dealing with code that deals with networking etc. The container will take care of things like wrapping the whole
-		thing in a HTTP response object and send it over to the client (say a browser).
-
-		Now the next logical question to ask is who decides what is a container supposed to do? And the answer is; In Java
-		world at least It is guided (note I did not use the word controlled) by specifications. For example Servlet
-		specifications (See resource 2) dictates what a servlet must be able to do. So if you can write an implementation
-		for the specification, congratulations you just created a container (Technically containers like Tomcat also implement
-		other specifications and do tricky stuff like custom class loaders etc but you get the idea).
-
-		Assuming you have a container, your servlets are now java classes whose lifecycle will be maintained by the container
-		but their reaction to incoming HTTP requests will be decided by you. You do that by writing what-you-want-to-do in the
-		pre-defined methods like init(), doGet(), doPost() etc. Look at Resource 3.
-
-		Here is a fun exercise for you. Create a simple servlet like in Resource 3 and write a few System.out.println() statements
-		in it's constructor method (Yes you can have a constructor of a servlet), init(), doGet(), doPost() methods and run the
-		servlet in tomcat. See the console logs and tomcat logs.
-	------------------------
-
-	Important Notes
-	---------------
-		Be Careful with Command Line Parameters
-			Jenkins ignores command line parameters it doesn’t understand instead of producing an error. Be careful when using
-			command line parameters and make sure you have the correct spelling. For example, the parameter needed for defining
-			the Jenkins administrative user is --argumentsRealm and not --argumentRealm.
-	---------------
+---------------
 
 ### My QA Session and Usefull Project Ideas
 
@@ -482,3 +478,5 @@ Jenkins - https://www.jenkins.io/doc/book/
     - [Answer](https://ericsink.com/entries/time_space_tradeoffs.html)
   2. Chat Application Using Raspberry Pi
     - To understand the network layers
+  3. Can I create a crypto currency network with Docker?
+    - ?????
