@@ -447,9 +447,9 @@ with us for now. To __clone__;
 >Docker can build images automatically by reading the instructions from a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession. This page describes the commands you can use in a Dockerfile. When you are done reading this page, refer to the Dockerfile [Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) for a tip-oriented guide.
 
 </details>
------------------------------------------------------------------------------------------------------
 
-### Jenkins
+<details>
+  <summary><font size=4>Jenkins</font></summary>
 
 <font size=4>**Useful Links for Learning Jenkins**</font>
   - <https://www.jenkins.io/doc/book/>
@@ -470,6 +470,7 @@ with us for now. To __clone__;
 <ins><font size=4>Important Notes</font></ins>
 * Be Careful with Command Line Parameters. Jenkins ignores command line parameters it doesn’t understand instead of producing an error. Be careful when using command line parameters and make sure you have the correct spelling. For example, the parameter needed for defining the Jenkins administrative user is --argumentsRealm and not --argumentRealm.
 
+</details>
 ---------------
 
 ### My QA Session and Usefull Project Ideas
