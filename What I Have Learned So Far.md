@@ -1,7 +1,5 @@
 [//]: # (<details>
-  <summary><font size=4>Docker</font></summary>
-
-         </details>)
+  <summary><font size=4></font></summary></details>)
 
 
 # What I Have Learned So Far
