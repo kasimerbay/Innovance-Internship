@@ -2,6 +2,10 @@
 - [ ] Docker - Konteyner standartı --> Task
 - [ ] CI/CD nedir / araçları nelerdir - Jenkins - Gitlab CI - Github Action - ARGOCD -->
 - [ ] Scripting - Bash / Python / Powershell --> Task
+	* [Bash Scripting](https://linuxconfig.org/bash-scripting-tutorial)
+	* [IBM DevOps Specilization 
+Course](https://www.coursera.org/professional-certificates/devops-and-software-engineering?skipBrowseRedirect=true#courses)
+	* 
 - [ ] --->Deployment Metodları - Avantaj ve Dejavantajları
 - [ ] Monitoring - Logging - ELK
 - [ ] Jenkins
