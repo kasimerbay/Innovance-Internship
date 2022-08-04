@@ -2,7 +2,7 @@
 
 # declare STRING variable
 
-STRING="Seni seviyorum Gülçehrem"
+STRING="Write Some Code"
 
 # print variable on a screen
 echo $STRING
