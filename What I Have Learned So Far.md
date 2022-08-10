@@ -3,7 +3,7 @@
 
 # What I Have Learned So Far
 
-<details>
+[//]: # (<details>)
   <summary><font size=4>General Knowladge</font></summary>
 
 ### SSH
@@ -21,7 +21,53 @@
 
 * **Hash Code** &rarr; A hash function is any function that can be used to map data of arbitrary size to fixed-size values.The values returned by a hash function are called hash values, hash codes, digests, or simply hashes.
 
-</details>
+* <font size=3>__How to Send E-mails Using Linux Terminal__</font>
+
+    * [Source Video](https://www.youtube.com/watch?v=uNss377DK88&t=51s)  
+
+      **__Installation and Configuration Commands__**
+      <font size=1>After seting up an _Ubuntu_ Server run the below commands and complete the configuration steps</font>
+
+        - `apt update`
+        - `apt upgrade`
+        - `apt install sudo`
+        - `sudo apt-get install nano`
+        - `sudo apt-get install postfix`  
+
+        <font size=2>In the process of installation you will see some prompt to be configured;
+
+          1. General Type of Mail Configuration
+            - <ins>2. Internet Site</ins> &rarr; This is the default one. Just type `2` and press enter.
+          2. System Mail Name
+            - Put your domain name: `example.domain.com` Does' not matter what you put
+          3. `cat /etc/postfix/main.cf` &rarr; The essential configuration file for postfix.</font>
+
+        - `nano /etc/postfix/sasl/sasl_passwd` &rarr; To give the credentials below
+          - `[smtp.gmail.com]:587 kasim.erbay@innovance.com.tr:<External_App_Password>`
+        - `postmap /etc/postfix/sasl/sasl_passwd` &rarr; to create `.db` file
+        - `chown root:root /etc/postfix/sasl/sasl_passwd /etc/postfix/sasl/sasl_passwd.db` &rarr; For security reasons
+        - `chmod 0600 /etc/postfix/sasl/sasl_passwd /etc/postfix/sasl/sasl_passwd.db` &rarr; For security reasons
+        - `nano /etc/postfix/main.cf` &rarr; Change `relayhost = [smtp.gmail.com]:587` and copy paste the following lines at the end of the file
+          - ```
+            smtp_sasl_auth_enable = yes
+            smtp_sasl_security_options = noanonymous
+            smtp_sasl_password_maps = hash:/etc/postfix/sasl/sasl_passwd
+            smtp_tls_security_level = encrypt
+            smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+            ```
+        - `ls /etc/ssl/certs/ca-certificates.crt` &rarr; Check the certificate if exists
+        - `apt install systemctl`
+        - `systemctl restart postfix` &rarr; To see if any error occurs. Should go to next line.
+
+        >From now on we could be able to send mails from terminal
+
+        - `sendmail <MAIL_ADDRESS_TO_BE_SENT>`
+          - `Subject: <SOME_SUBJECT>`
+          - `<TEXT_HERE>`
+          - `Ctrl + d`
+        - 
+
+[//]: # (</details>)
 
 <details>
   <summary><font size=4>Vim</font></summary>
@@ -44,9 +90,10 @@ Git is an open-source, version control tool created in 2005 by developers workin
 
 <font size=4>**Useful Links for Learning Git and GitHub**</font>
 
-* [GitHub - Git](https://learngitbranching.js.org "GitHub")
-
 * [Reading Material About Basic Git Commands](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+* [GitHub - Git](https://learngitbranching.js.org "GitHub")
+* [Git Best Practices](https://sethrobertson.github.io/GitBestPractices/)
+
 
 <font size=4>**Quick Git Tutorial**</font>
 
