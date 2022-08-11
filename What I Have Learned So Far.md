@@ -65,7 +65,7 @@
           - `Subject: <SOME_SUBJECT>`
           - `<TEXT_HERE>`
           - `Ctrl + d`
-        - 
+        -
 
 [//]: # (</details>)
 
