@@ -139,11 +139,13 @@
   * _Cloud Native Microservices_
 
     - Cloud native architecture is a collection of independently deployable microservices.
-    - Microservices are loosely coupled services, designed fro scalability and communication with API's.
+    ![Monlith_vs_Microservices](<Insert The Path_Here>)
+    - Microservices are loosely coupled services, designed for scalability and communication with API's.
 
     >   __Definiton Microservices__
-    ... the microservice architectural style is an approach to developing a single application as a __suite of small services__, each __running in its own prcesses__ and communicating wtih lightweight mechanisms, often an HTTP resource API (generally RestAPI). These services are __built  around business capabilities__ and __independently deployable__ by fully automated deployment machinery.
-    -Martin Fowler and James Lewis
+  ... the microservice architectural style is an approach to developing a single application as a __suite of small services__, each __running in its own prcesses__ and communicating wtih lightweight mechanisms, often an HTTP resource API (generally RestAPI). These services are __built  around business capabilities__ and __independently deployable__ by fully automated deployment machinery.
+  -Martin Fowler and James Lewis
+
 
 
   * _Design for Failure_
@@ -163,3 +165,101 @@
       - _Netflix_ created __The Simian Army__ tools
 
 ---
+
+## <ins>__Taylorism and Working in Silos__</ins>
+
+  * _DevOps Way of Working_
+    - Culture of teaming and collaboration
+    - Agile development as a shared discipline
+    - Automation relentlessly is rewarded
+    - Push smaller releases faster minimizes risks and maximize learning
+
+
+  * _Taylorism_
+    - Adoption of command and control management
+    - Organizations divided into functional silos
+    - Decision-making is seperated from work
+
+
+  * <ins>_Impact of Taylorism on Information Technology_</ins>
+      - Project Management (Planners),
+      - Architects,
+      - Developers,
+      - Testers,
+      - Operations,
+      - Security,
+        all has seperated tasks.
+
+        >Taylorism is not appropriate for IT.
+
+        >As Steve Jobs stated "You can not hire smart people and tell them what to do". Abandon command and control.
+
+
+  * _Reqired DevOps Behaviours_
+    - Organizational silos and hand offs &cross;
+    - Shared ownership and high collaboration &check;
+    - Fear of change &cross;
+    - Risk management by embracing change &check;
+    - Build once, hand crafted "snowflakes" &cross;
+    - Ephemeral infrastructure as code &check;
+    - Manual fulfillment &cross;
+    - Automated self-service &check;
+    - Alarms, callbacks, and escalations &cross;
+    - Feedback loops and data-driven responses &check;
+
+
+  * _Infrastructure as Code_
+    - Described an executible textual format
+    - Configure using that description
+    - Configuration Management systems make this possible
+    - <ins>__Never perform configurations manually__</ins>
+    - Use version control system
+
+
+  * _Ephemeral Immutable Infrastructure_
+    - Server drift is a major source of failure
+    - Servers are cattle not pets
+    - Infrastructure is transient
+    - Build through parallel infrastructure
+
+
+  * _Immutable Delivery via Containers_
+    - Applications are packaged in containers
+    - Same container that runs in production can be run locally
+    - Dependencies are contained
+    - No variance limits side-effects
+    - Rolling updates with immediate roll-back
+    * <ins>_Immutable Way of Working_</ins>
+      - You never make changes to a running container
+      - Make changes to the image
+      - Then redeploy a new container
+      - Keep images up to date not the running container
+
+
+  * _Continuous Integration vs. Continuous Delivery_
+    - CI/CD is not one thing
+    - <font size=4>__Continuous Integration (CI)__</font>
+      - Continously building, testing and merging to master
+      - Developers integrate code often
+      - Developers work in short-lived feature branches
+      - Each check-in is verified by an automated build
+      - Working in small batches &rarr;
+      - Commiting regularly &rarr; Reduces the complexity of changes and merge conflicts
+      - Using pull requests &rarr; Allow team members to communicate via code reviews and every changes pass through more than one set of eyes
+      -  Commiting all changes daily
+      - _CI Automation_
+        - Build and test every pull request
+        - Use CI tools that monitor version control
+        - Test should run after each build
+        - Never merge a pull request with failin tests
+    - _Benefits of Continous Integration_
+      - Faster reaction times to changes because you automated tests and this gives you faster action-reaction instincts
+      - Reduced code integration risks
+      - Higher code quality
+      - Master branch should always be deployable.
+    - <font size=4>__Continuous Delivery (CD)__</font>
+      - Continously deploying to a production-like environment
+      - The master branch should always be ready to deploy
+      - You need a way to know if something will "break the build"
+      - Deliver every change to a production-like environment
+    - <font size=4>__CI/CD Pipeline__</font>
