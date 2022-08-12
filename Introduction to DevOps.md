@@ -4,11 +4,7 @@
 
 >_Tools we are using are not the solution to a cultural problem._
 
-- Consider this...
-  - What if you could fail fast and roll back quickly?
-  - What is you could test in-market instead of analyzing?
-  - What if your application design allowed individual componenets to be replaced?
-  - How quickly you can recover? The question is not how fast you can fail.
+
 
 ## <ins>__Definition of DevOps__</ins></font>
   >The term (development and operations) is an extension of __agile development environments__ that aims to enhance the process of software delivery as a whole.
@@ -17,47 +13,54 @@
   >[Extreme Programming](https://www.agilealliance.org/glossary/xp/#q=~(infinite~false~filters~(postType~(~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video)~tags~(~'xp))~searchTerm~'~sort~false~sortDirection~'asc~page~1)) paved the way for Agile development
   >[Agile Methods](https://www.jigsawacademy.com/blogs/product-management/types-of-agile-methodology/)
 
-  * __The Agile Mainfesto__
-    1. __Individuals__ and __interactions__ over processes and tools
-    2. __Working software__ over comprehensive documentation
-    3. __Customer colloboration__ over contract negotiation
-    4. __Responding to change__ over following plan
+  - Consider this...
+    - What if you could fail fast and roll back quickly?
+    - What is you could test in-market instead of analyzing?
+    - What if your application design allowed individual componenets to be replaced?
+    - How quickly you can recover? The question is not how fast you can fail.
 
 
-  * _DevOps defined_:
-    * Recognition that working in silos doesn't work
-    * Development and operations engineer working together
-    * Following lean and agile principles
-    * Delivering software in a rapid and continuous manner
+  - __The Agile Mainfesto__
+    - __Individuals__ and __interactions__ over processes and tools
+    - __Working software__ over comprehensive documentation
+    - __Customer colloboration__ over contract negotiation
+    - __Responding to change__ over following plan
 
 
-  * _DevOps requires_;
-    * A change in culture,
-    * A new application design,
-    * Leveraging automation,
-    * Programmable platform
+  - _DevOps defined_:
+    - Recognition that working in silos doesn't work
+    - Development and operations engineer working together
+    - Following lean and agile principles
+    - Delivering software in a rapid and continuous manner
 
 
-  * _What DevOps is not_,
-    * Not simply combining development and operations
-    * Not a seperate team
-    * Not a tool
-    * Not one size fits all &rarr; There no one set of measurements
+  - _DevOps requires_;
+    - A change in culture,
+    - A new application design,
+    - Leveraging automation,
+    - Programmable platform
+
+
+  - _What DevOps is not_,
+    - Not simply combining development and operations
+    - Not a seperate team
+    - Not a tool
+    - Not one size fits all &rarr; There no one set of measurements
 
 
   - To _spread the mindset_ and _the culturel changes_ in the company;
-    * __Think Differently__
+    - __Think Differently__
       - Social Coding
       - Working in small bathes
       - Minimum Viable Product
-    * __Work Differently__
+    - __Work Differently__
       - Test Driven Development
       - Behaviour Driven Development
       - Continuous Integration
       - Continous Delivery
-    * __Organize Differently__
+    - __Organize Differently__
       - Organization Impacts Design
-    * __Measure Differently__
+    - __Measure Differently__
       - Measure what matters
 
 ---
@@ -77,7 +80,7 @@
     - __Infrastructure__ : _Physical Servers_ &rarr; _Virtual Machines_ &rarr; _Containers_
 
 
-  * __Traditional Waterfall Development__
+  - __Traditional Waterfall Development__
     1. Requirements
     2. Design
     3. Code
@@ -182,17 +185,17 @@
 
 
   * <ins>_Impact of Taylorism on Information Technology_</ins>
-      - Project Management (Planners),
-      - Architects,
-      - Developers,
-      - Testers,
-      - Operations,
-      - Security,
-        all has seperated tasks.
+    - Project Management (Planners),
+    - Architects,
+    - Developers,
+    - Testers,
+    - Operations,
+    - Security,
+    all has seperated tasks.
 
-        >Taylorism is not appropriate for IT.
+    >Taylorism is not appropriate for IT.
 
-        >As Steve Jobs stated "You can not hire smart people and tell them what to do". Abandon command and control.
+    >As Steve Jobs stated "You can not hire smart people and tell them what to do". Abandon command and control.
 
 
   * _Reqired DevOps Behaviours_
@@ -263,3 +266,30 @@
       - You need a way to know if something will "break the build"
       - Deliver every change to a production-like environment
     - <font size=4>__CI/CD Pipeline__</font>
+      - Automated gates that create a pipeline of checks;
+        - Unit Testing
+        - Code Quality Checks
+        - Integration Testing
+        - Security Testing
+        - Vulnerability Scanning
+        - Package Signing
+      - Needs for CI/CD Pipeline;
+        - A code repository
+        - A build server (ex. GitHub Actions)
+        - An Integration Server
+        - An Artifact Repository (ex. Docker Images)
+        - Automatic Configuration and Deployment
+      - Key Principles
+        - Build Quilty In
+        - Work in Small Batches
+        - Computers perform repetitive tasts, people solve problems
+        - Relentlesly pursue continuous improvement
+        - Everyone is responsible
+
+---
+
+## <ins>__Organizational Impacts of DevOps__</ins>
+
+  * _sdf_
+
+---
