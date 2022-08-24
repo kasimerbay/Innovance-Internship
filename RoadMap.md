@@ -19,3 +19,4 @@ Course](https://www.coursera.org/professional-certificates/devops-and-software-e
 - [ ] Ansible (UI-Tower (free AWX)
 - [ ] Azure Devops
 - [ ] APM (Dynatrace-Riverbed-AppDynamics-New Relic
+- [ ] Jenkins - Gitlab CI - Github Action - ARGOCD arasındaki farklar avantaj dezavantajları

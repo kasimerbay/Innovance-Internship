@@ -290,6 +290,49 @@
 
 ## <ins>__Organizational Impacts of DevOps__</ins>
 
-  * _sdf_
+  - _Conway's Law_
+
+    >Any organization tahat designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.
+    -Melvin Conway, Datamation, 1968
+
+
+  - _There is No DevOps Team_
+    - A cultural transformation on an organizational scale
+    - Development and operation engineers working together
+    - Following lean and agile principles
+    - Cross-functional teams with opennes, transparency and trust as pillars
+    - Organizations need to have small, dedicated, cross-functional, self-organizing teams to successfully implement DevOps.
+    - Conway’s Law implies that a company’s design results are a direct reflection of the company’s communication structure.
+    - Instead of the traditional structure organized around technology, successful DevOps teams should be organized around business domains. Each team should have its own mission that aligns with a business domain.
+    - DevOps is a mindset that the whole organization adopts.
+    - DevOps solves problems caused by siloed teams.
+    - DevOps is the practice of development and operations engineers working together during the entire software lifecycle, following lean and Agile principles that allow them to deliver high-quality results.
+    - Actions without consequences can lead to apathy.
+    - Allowing teams to feel the effect of their actions fosters empathy, resulting in higher-quality work.
+    - The organizational objective of DevOps is to attain a shared mindset and empower everyone to deliver customer value.
+
+  - _Measuring DevOps_
+    - A baseline provides a concrete  number for comparison as you implement your DevOps changes
+    - __Metric goals__ allow you to reason about these numbers and judge the success of your progress
+    - _Vanity Metrics_
+    - _Actionable Metrics_
+      - Reduce time to market new features
+      - Increase overall availability
+      - Reduce the time to deploy
+      - Defects detected before production
+      - More efficient use of infrastructure
+      - Quicker performance feedback
+      - __Mean Lead Time__ &rarr; How long it takes an idea to get to production
+      - __Release Frequency__
+      - __Change Failure Rate__ &rarr; When you push things out how often they fail
+      - __Mean Time to Failure__
+
+  - _DevOps Culture_
+    - Actively Learn Information on Your Field
+    - Nothing to Be Judged for a Failure - Blameless Culture
+    - Share the Responsibilities
+    - Be cross-reader
+    - Create A New Ideas List
+
 
 ---
