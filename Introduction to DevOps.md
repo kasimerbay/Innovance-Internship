@@ -295,7 +295,6 @@
     >Any organization tahat designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.
     -Melvin Conway, Datamation, 1968
 
-
   - _There is No DevOps Team_
     - A cultural transformation on an organizational scale
     - Development and operation engineers working together

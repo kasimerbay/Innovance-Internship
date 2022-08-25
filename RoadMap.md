@@ -1,11 +1,12 @@
 - [ ] Git komutları ??? (Github - Gitlab )
+	- Git - Git Server?
 - [ ] Docker - Konteyner standartı --> Task
 - [ ] CI/CD nedir / araçları nelerdir - Jenkins - Gitlab CI - Github Action - ARGOCD -->
 - [ ] Scripting - Bash / Python / Powershell --> Task
 	* [Bash Scripting](https://linuxconfig.org/bash-scripting-tutorial)
-	* [IBM DevOps Specilization 
+	* [IBM DevOps Specilization
 Course](https://www.coursera.org/professional-certificates/devops-and-software-engineering?skipBrowseRedirect=true#courses)
-	* 
+	*
 - [ ] --->Deployment Metodları - Avantaj ve Dejavantajları
 - [ ] Monitoring - Logging - ELK
 - [ ] Jenkins
@@ -20,3 +21,11 @@ Course](https://www.coursera.org/professional-certificates/devops-and-software-e
 - [ ] Azure Devops
 - [ ] APM (Dynatrace-Riverbed-AppDynamics-New Relic
 - [ ] Jenkins - Gitlab CI - Github Action - ARGOCD arasındaki farklar avantaj dezavantajları
+	- [Best CI/CD Tools](https://www.lambdatest.com/blog/best-ci-cd-tools/)
+	- How to build CI/CD with [GitHub Actions](https://github.blog/2022-06-03-a-beginners-guide-to-ci-cd-and-automation-on-github/)
+	- [Jenkins Tutorial: A Comprehensive Guide With Examples and Best Practices](https://www.lambdatest.com/learning-hub/jenkins)
+
+
+---
+
+- [ ] MiddleWare nedir?
