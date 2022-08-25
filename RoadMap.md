@@ -24,7 +24,7 @@ Course](https://www.coursera.org/professional-certificates/devops-and-software-e
 	- [Best CI/CD Tools](https://www.lambdatest.com/blog/best-ci-cd-tools/)
 	- How to build CI/CD with [GitHub Actions](https://github.blog/2022-06-03-a-beginners-guide-to-ci-cd-and-automation-on-github/)
 	- [Jenkins Tutorial: A Comprehensive Guide With Examples and Best Practices](https://www.lambdatest.com/learning-hub/jenkins)
-
+- [ ] [LDAP and AD](https://www.varonis.com/blog/the-difference-between-active-directory-and-ldap#:~:text=LDAP%20is%20a%20directory%20services,that%20uses%20the%20LDAP%20protocol.)
 
 ---
 
